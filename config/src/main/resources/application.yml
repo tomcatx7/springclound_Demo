@@ -1,0 +1,26 @@
+server:
+  port: 8888
+eureka:
+  instance:
+    status-page-url-path: /admin/info
+    health-check-url-path: /admin/health
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+
+spring:
+  profiles:
+    #默认读取本地文件
+    active: native
+  cloud:
+    config:
+      server:
+        #配置本地文件读取路径
+        native:
+          search-locations: classpath:/config/
+          default-label: master
+        git:
+          basedir: /
+  application:
+    name: config-server
