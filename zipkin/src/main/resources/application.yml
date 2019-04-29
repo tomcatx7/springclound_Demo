@@ -1,0 +1,11 @@
+server:
+  # zipkin default port 9411
+  port: 9411
+spring:
+  application:
+    name: zipkin-server
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
