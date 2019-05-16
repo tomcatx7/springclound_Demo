@@ -17,6 +17,7 @@ public class MyWebSocket
 {
     private static volatile AtomicInteger count = new AtomicInteger( 0 );
 
+    //服务端会为每个客户请求生成一个MyWebSocket实例
     private static CopyOnWriteArraySet<MyWebSocket> webSocketSet = new CopyOnWriteArraySet<>();
 
     //与客户端建立的连接后产生的session
