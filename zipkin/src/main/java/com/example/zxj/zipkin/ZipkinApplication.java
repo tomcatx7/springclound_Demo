@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import zipkin2.server.internal.EnableZipkinServer;
 
+import java.util.ArrayList;
+
 @SpringBootApplication
 // client add the dependency of spring-cloud-starter-zipkin
 // and  SpringBootApplication could autoconfigure and register to the zipkinserver
